@@ -4,11 +4,15 @@
     <h1>Upload File</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="file" id="file" required>
-        <input type="submit" value="Carica" name="submit">
-
     </form>
   </div>
-
+<div class="file-carica">
+  <input type="submit" value="Carica" name="submit">
+  <button mat-mini-fab class="upload-btn"
+      (click)="fileUpload.click()">
+        <mat-icon class="attach">attach_file</mat-icon>
+    </button>
+</div>
 
 
 </main>

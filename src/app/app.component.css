@@ -1,5 +1,25 @@
 
 .container {
-  background-color: rgb(252, 86, 86);
+  background-color: rgb(179, 255, 57);
 }
 
+.file-input {
+  display: none;
+}
+
+#file {
+  display: none;
+}
+
+.upload-btn {
+  width: 150px;
+}
+
+.attach{
+  width: 100px;
+}
+
+.file-carica{
+  position: absolute;
+  margin-left: 45%;
+}
