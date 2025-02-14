@@ -2,19 +2,36 @@
   <div class="container">
     <h1>Welcome to {{title}}</h1>
     <h1>Upload File</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-      <input type="file" class="file-input"
-       (change)="onFileSelected($event)" #fileUpload>
-    </form>
+
+      <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+
   <div class="file-upload">
+    <div class="file-info">
+      {{fileName || "No file uploaded yet."}}
+      <div *ngIf="isUploading" class="upload-progress">
+        <mat-progress-bar
+          mode="determinate"
+          [value]="uploadProgress">
+        </mat-progress-bar>
+      </div>
+      <div *ngIf="uploadError" class="upload-error">
+        {{uploadError}}
+      </div>
+    </div>
 
-   {{fileName || "No file uploaded yet."}}
+    <div class="upload-controls">
+      <button mat-mini-fab color="primary" class="upload-btn"
+        (click)="fileUpload.click()" [disabled]="isUploading">
+          <mat-icon class="attach">Upload</mat-icon>
+      </button>
 
-    <button mat-mini-fab color="primary" class="upload-btn"
-      (click)="fileUpload.click()">
-        <mat-icon class="attach">Upload</mat-icon>
-    </button>
+      <button *ngIf="isUploading" mat-mini-fab color="warn" class="cancel-btn"
+        (click)="cancelUpload()">
+          <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+
+
 
 <main>
-
-
