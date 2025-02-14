@@ -12,14 +12,24 @@
 }
 
 .upload-btn {
-  width: 150px;
+  width: 250px;
+  height: 200px;
 }
 
 .attach{
   width: 100px;
+  height: 100px;
 }
 
 .file-carica{
-  position: absolute;
+
   margin-left: 45%;
+  margin-top: 10%;
+  font-size: 20px;
+  color: white;
+
+}
+
+main {
+  background-color: silver;
 }

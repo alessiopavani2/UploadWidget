@@ -9,6 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+uploadFile() {
+throw new Error('Method not implemented.');
+}
+onFileSelected($event: Event) {
+throw new Error('Method not implemented.');
+}
   title = 'yo mama';
-  fileUpload: any;
+  carica: any;
+  fileName: any;
 }

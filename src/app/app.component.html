@@ -6,12 +6,20 @@
         <input type="file" name="file" id="file" required>
     </form>
   </div>
+  <input style="display: none;" type="file" #carica (change)="onFileSelected($event)">
+
 <div class="file-carica">
-  <input type="submit" value="Carica" name="submit">
-  <button mat-mini-fab class="upload-btn"
-      (click)="fileUpload.click()">
-        <mat-icon class="attach">attach_file</mat-icon>
+
+
+
+
+  <button mat-mini-fab class="upload-btn" (click)="carica.click()">
+
+
+        <mat-icon class="attach">Clicca qua per caricare</mat-icon>
+
     </button>
+    {{fileName || "No file uploaded yet."}}
 </div>
 
 
