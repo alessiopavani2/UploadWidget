@@ -1,35 +1,25 @@
-
-.container {
-  background-color: rgb(179, 255, 57);
+.container{
+  background-color: rgb(216, 42, 118);
+  color: white;
 }
 
 .file-input {
   display: none;
 }
-
 #file {
   display: none;
 }
-
 .upload-btn {
-  width: 250px;
-  height: 200px;
+  width: 150px;
 }
 
 .attach{
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  overflow: visible;
+  white-space: nowrap;
+  justify-content: center;
 }
-
 .file-carica{
-
+  position: absolute;
   margin-left: 45%;
-  margin-top: 10%;
-  font-size: 20px;
-  color: white;
-
-}
-
-main {
-  background-color: silver;
 }

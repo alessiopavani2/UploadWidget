@@ -3,24 +3,27 @@
     <h1>Welcome to {{title}}</h1>
     <h1>Upload File</h1>
     <form action="" method="post" enctype="multipart/form-data">
+      <input type="file" class="file-input"
+       (change)="onFileSelected($event)" #fileUpload>
+    </form>
+  <div class="file-upload">
+
+   {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+        <mat-icon class="attach">Upload</mat-icon>
+    </button>
+
+<main>
+  <div class="container">
+    <h1>Welcome to {{title}}</h1>
+    <h1>Upload File</h1>
+    <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="file" id="file" required>
     </form>
   </div>
-  <input style="display: none;" type="file" #carica (change)="onFileSelected($event)">
-
-<div class="file-carica">
 
 
+<main>
 
-
-  <button mat-mini-fab class="upload-btn" (click)="carica.click()">
-
-
-        <mat-icon class="attach">Clicca qua per caricare</mat-icon>
-
-    </button>
-    {{fileName || "No file uploaded yet."}}
-</div>
-
-
-</main>
