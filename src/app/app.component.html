@@ -1,40 +1,47 @@
-<main>
-  <div class="container">
-    <h1>Welcome to {{title}}</h1>
-    <h1>Upload File</h1>
+<html>
+  <head>
+    <title>Upload Widget</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Welcome to {{title}}</h1>
+        <h1>Upload File</h1>
+    
+          <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+    
+    
+      <div class="file-upload">
+        <div class="file-info">
+          {{fileName || "No file uploaded yet."}}
+    <div>
 
-      <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+      <mat-progress-bar mode="indeterminate" [value]="uploadProgress" *ngIf="isUploading">
 
-
-  <div class="file-upload">
-    <div class="file-info">
-      {{fileName || "No file uploaded yet."}}
-      <div >
-
-        <mat-progress-bar mode="indeterminate"
-[value]="uploadProgress" *ngIf="isUploading">
-
-</mat-progress-bar>
+      </mat-progress-bar>
+      {{uploadProgress}}%
       <div *ngIf="uploadError" class="upload-error">
         {{uploadError}}
       </div>
     </div>
-
-    <div class="upload-controls">
-      <button mat-mini-fab color="primary" class="upload-btn"
-        (click)="fileUpload.click()">
-          <mat-icon class = "upload">Upload</mat-icon>
-      </button>
-
-      <button mat-mini-fab color="warn" class="cancel-btn"
-        (click)="cancelUpload()">
-          <mat-icon class = "cancel">Cancel</mat-icon>
-      </button>
+        </div>
+    <br><br><br>
+        <div class="upload-controls">
+          <button mat-mini-fab color="primary" class="upload-btn"
+            (click)="fileUpload.click()">
+              <mat-icon class = "upload">Upload</mat-icon>
+          </button>
+    
+          <button mat-mini-fab color="warn" class="cancel-btn"
+            (click)="cancelUpload()">
+              <mat-icon class = "cancel">Cancel</mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    </main>
+  </body>
+</html>
 
 
 
-
-<main>
