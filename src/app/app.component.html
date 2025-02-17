@@ -16,7 +16,7 @@
           {{fileName || "No file uploaded yet."}}
     <div>
 
-      <mat-progress-bar mode="indeterminate" [value]="uploadProgress" *ngIf="isUploading">
+      <mat-progress-bar mode="determinate" [value]="uploadProgress" *ngIf="isUploading">
 
       </mat-progress-bar>
       {{uploadProgress}}%
