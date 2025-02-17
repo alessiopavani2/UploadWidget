@@ -4,14 +4,17 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <h1>Welcome to {{title}}</h1>
-        <h1>Upload File</h1>
-    
-          <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
-    
-    
-      <div class="file-upload">
+      <div class="posizione">
+        <div class="container">
+          <h1>Welcome to {{title}}</h1>
+          <h1>Upload File</h1>
+
+            <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+
+        <div class="file-upload">
+      </div>
+
         <div class="file-info">
           {{fileName || "No file uploaded yet."}}
     <div>
@@ -31,7 +34,7 @@
             (click)="fileUpload.click()">
               <mat-icon class = "upload">Upload</mat-icon>
           </button>
-    
+
           <button mat-mini-fab color="warn" class="cancel-btn"
             (click)="cancelUpload()">
               <mat-icon class = "cancel">Cancel</mat-icon>

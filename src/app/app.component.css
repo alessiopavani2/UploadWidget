@@ -1,24 +1,26 @@
+
 .container {
-  
+  margin-right: 23%;
   max-width: 800px;
-  margin: 15%;
-  padding: 2rem;
-  margin-left: 500px;
+  margin-left: 23%;
   text-align: center;
-  background-color: #7bff22;
+  background-color: #52dfb7;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgb(3, 124, 124);
+  border-style: solid;
 }
 
+.posizione{
+  padding: 7%;
+}
 main {
   height: 100%;
   position:relative;
+  background-color: rgb(69, 63, 63);
 }
 
-html {
-  height: 100%;
-  background-color: #5a78ff;
-}
+
 
 .file-input {
   display: none;
@@ -46,7 +48,7 @@ border-style: solid;
   background-color: #ff0000;
   position: absolute;
   justify-content: center;
-  
+
 }
 
 .cancel {
@@ -63,7 +65,7 @@ border-style: solid;
   padding: 0.8rem 2rem;
   background-color: #00b894;
   color: white;
-  
+
   border-style: solid;
   border-radius: 4px;
   cursor: pointer;
