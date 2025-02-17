@@ -9,11 +9,11 @@
   <div class="file-upload">
     <div class="file-info">
       {{fileName || "No file uploaded yet."}}
-      <div *ngIf="isUploading" class="upload-progress">
-        <mat-progress-bar
-          mode="determinate"
-          [value]="uploadProgress">
-        </mat-progress-bar>
+      <div>
+        <mat-progress-bar class="progress-bar" mode="determinate"
+                    [value]="uploadProgress" *ngIf="uploadProgress">
+
+  </mat-progress-bar>
       </div>
       <div *ngIf="uploadError" class="upload-error">
         {{uploadError}}
@@ -22,13 +22,13 @@
 
     <div class="upload-controls">
       <button mat-mini-fab color="primary" class="upload-btn"
-        (click)="fileUpload.click()" [disabled]="isUploading">
-          <mat-icon class="attach">Upload</mat-icon>
+        (click)="fileUpload.click()">
+          <mat-icon>Upload</mat-icon>
       </button>
 
-      <button *ngIf="isUploading" mat-mini-fab color="warn" class="cancel-btn"
+      <button mat-mini-fab color="warn" class="cancel-btn"
         (click)="cancelUpload()">
-          <mat-icon>cancel</mat-icon>
+          <mat-icon>Cancel</mat-icon>
       </button>
     </div>
 

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'yo mama';
+  title = 'Angular';
   fileName = '';
 
   constructor(private http: HttpClient) {}
@@ -37,7 +37,8 @@ export class AppComponent {
     const formData = new FormData();
     formData.append('file', file);
 
-    this.uploadSubscription = this.http.post('/api/upload', formData, {
+    this.uploadSubscription = this.http.post('http://localhost:3000/api/upload', formData, {
+
       reportProgress: true,
       observe: 'events'
     }).subscribe({
