@@ -1,10 +1,10 @@
 # UploadWidget
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+This little project of ours was made using Angular by following this tutorial: https://angular.dev/tutorials/learn-angular for the frontend of the app, and following this tutorial: https://blog.angular-university.io/angular-file-upload/ for the main functionalities of the app.
 
-## Development server
+## What is it
 
-To start a local development server, run:
+This app is called UploadWidget and it consists of a simple Angular app that allows users to upload files to a server. The app has a simple UI that allows users to select a file, and upload the file to the server and eventually to even cancel the upload . The app also has a feature to display the progress of the upload. The app is built using Angular and uses the Angular CLI to create the project. The app uses the HttpClient to make HTTP requests to the server. The following command is used to start the app:
 
 ```bash
 ng serve
@@ -12,13 +12,15 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Objectives
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The main objectives of this project are:
+- To create a simple Angular app that allows users to upload files to a server.
+- To learn how to build a fully functional Angular file upload component.
+- To learn how to use the HttpClient to make HTTP requests to the server.
 
-```bash
-ng generate component component-name
-```
+
+
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
@@ -26,15 +28,6 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
 ## Running unit tests
 
@@ -43,6 +36,7 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ```bash
 ng test
 ```
+
 
 ## Running end-to-end tests
 
@@ -54,6 +48,4 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
